@@ -125,7 +125,7 @@ ORDER BY   1,2
 
 --Global overall new cases vs new deaths
 
-SELECT     SUM(new_cases)new_cases, SUM(new_deaths)new_deaths,
+SELECT     SUM(new_cases)total_cases, SUM(new_deaths)total_deaths,
            SUM(new_deaths)/SUM(new_cases+0.01)*100 AS death_rate
 FROM       Portfolio_Project..covid_deaths
 WHERE      continent is not null
